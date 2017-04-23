@@ -1,9 +1,29 @@
 import * as cheerio from 'cheerio'
 
+const performScrape = (selection:Cheerio, schema) => {
+  if (schema instanceof Array) {
+    return schema.reduce((acc, def) => performScrape(acc, def), selection)
+  } else if (schema instanceof Function) {
+    // TODO: find better type detection, as functions are matching instanceof Object, therefore order of these if blocks matters
+    return schema(selection)
+  } else if (schema instanceof Object) {
+    return Object.keys(schema).reduce((acc, key) => ({ ...acc, [key]: performScrape(selection, schema[key]) }), {})
+  } else {
+    return selection.find(schema)
+  }
+}
+
 const scrape = (source, schema) => {
   const $ = cheerio.load(source)
-  const parsed = $(schema)
-  return parsed.text()
+  return performScrape($.root(), schema)
 }
 
 export default scrape
+
+export const text = () => (el) => {
+  return el.text()
+}
+
+export const attr = (attrName) => (el) => {
+  return el.attr(attrName)
+}
