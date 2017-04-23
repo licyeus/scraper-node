@@ -1,0 +1,19 @@
+{
+  "name": "scraper-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Andrew Sullivan <andrew@inkblot.io>",
+  "license": "MIT",
+  "scripts": {
+    "dev-test-watch": "mocha-typescript-watch"
+  },
+  "dependencies": {
+    "@types/cheerio": "^0.22.1",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^7.0.13",
+    "chai": "^3.5.0",
+    "cheerio": "^0.22.0",
+    "mocha": "^3.2.0",
+    "mocha-typescript": "^1.0.23"
+  }
+}

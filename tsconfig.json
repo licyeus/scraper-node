@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "types": ["node", "mocha", "chai"]
+  },
+  "include": [
+    "scraper.ts",
+    "test.ts",
+    "node_modules/@types"
+  ]
+}

@@ -1,0 +1,572 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_theHead"><title>
+	Chapter 1.04 RCW: THE CODE
+</title><meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <!-- make IE use highest version - not compat -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        if (typeof jQuery == "undefined") {
+            document.write(unescape("%3Cscript src='//app.leg.wa.gov/assets/javascript/framework/jquery/jquery-1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+
+    <link href="https://app.leg.wa.gov/assets/css/framework/jquery/mobile/1.4.2/Wsl-Theme.min.css" rel="stylesheet" /><link rel="stylesheet" href="css/style.min.css?v=20160125053519" />
+
+    <script type="text/javascript" src="//app.leg.wa.gov/assets/Javascript/Framework/2.0/baseFramework.min.js"></script>
+
+    <script type="text/javascript" src="js/script.min.js?v=20160125053519"></script>
+
+    <script src="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <script>
+        if (typeof $.mobile == 'undefined') {
+            document.write(unescape("%3Cscript src='//app.leg.wa.gov/assets/javascript/framework/jquery/jquery.mobile-1.4.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+    
+    
+</head>
+<body>
+    <div id="mediaquery">
+        <!-- do not delete, used for js media queries-->
+    </div>
+    <div data-role="page" id="rcwPage" data-theme="b">
+
+        <div id="headerElements">
+            
+        <div id="mobileHeader">
+            <div class="headerImg">
+                <a class="ui-link" href="http://leg.wa.gov/">
+                <picture>
+                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                    <source media="(min-width: 600px)" srcset="/assets/images/PubSiteBanner2013Tablet.jpg, /assets/images/PubSiteBanner2013Tablet2x.jpg 2x"></source>
+                    <source srcset="/assets/images/PubSiteBanner2013PhoneTall.jpg, /assets/images/PubSiteBanner2013PhoneTall2x.jpg 2x"></source>
+                    <!--[if IE 9]></video><![endif]-->
+                    <img alt="Washington State Legislature" srcset="/assets/images/PubSiteBanner2013PhoneTall.jpg, /assets/images/PubSiteBanner2013PhoneTall2x.jpg 2x">
+                </picture>
+                </a>
+</div>
+            <a href="#navPanel" class="menuBtn ui-btn-left ui-btn ui-btn-c ui-corner-all ">
+                Menu
+
+            </a>
+            <a id="searchPanel" href="#" class="searchBtn ui-nodisc-icon ui-btn-right ui-btn ui-btn-c ui-icon-search ui-btn-icon-notext ui-shadow ui-corner-all">
+                Search
+
+            </a>
+        </div>
+        <div id="divMobileSearch">
+            <fieldset data-theme="e" class="row ui-body-b">
+                <div class="col-xs-8 col-xs-offset-1">
+                    <label for="mobileSearchInput" class="offScreenLabel">Enter search terms</label>
+                    <input id="mobileSearchInput" class="ui-mini" type="text" placeholder="Enter search terms" name="customSearchBox" size="15">
+                </div>
+                <div class="col-xs-3  col-xs-offset-0">
+                    <a id="mobileSubmitSearchBtn" href="" class="searchBtn ui-btn ui-btn-c ui-shadow ui-mini ui-corner-all ui-btn-inline">
+                        Go
+                    </a>
+                </div>
+            </fieldset>
+        </div>
+        <div id="largePageHeader">
+            <div id="banner">
+                <div id="bannerImg">
+                    <a class="ui-link" href="http://leg.wa.gov/">
+                    <picture>
+                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                        <source media="(min-width: 768px)" srcset="/assets/images/PubSiteBanner2013Full.jpg 1x, /assets/images/PubSiteBanner2013Full2x.jpg 2x"></source>
+                        <!--[if IE 9]></video><![endif]-->
+                        <img alt="Washington State Legislature" srcset="/assets/images/PubSiteBanner2013PhoneTall.jpg">
+                    </picture>
+                    </a>
+                </div>
+                <div id="bannerGraphicBackground">
+                    <!-- div to show green background -->
+                </div>
+                <div id="divSearch">
+                    <label for="bannerSearchInput" class="offScreenLabel">Enter search terms</label>
+                    <input id="bannerSearchInput" type="text" name="customSearchBox" size="15">
+                    <img id="bannerSubmitSearchBtn" alt="Search" src="/assets/images/searchicon.jpg">
+                </div>
+            </div>
+        </div>
+    
+        </div>
+        <div data-role="panel" data-position="left" data-display="push" id="navPanel">
+            <!-- this is where the navigation will be inserted by javascript -->
+        </div>
+        
+        <div id="navigationList">
+            <div class="sidebarNavigation">
+                <ul style="padding:0; margin:0;" class="ui-listview ui-group-theme-b ui-theme-b" data-role="listview" data-theme="b" id="navigationSubsiteHeader" data-inset="false">
+                    <li data-theme="b" role="heading" class="ui-li-divider ui-bar-b ui-first-child ui-last-child" data-role="list-divider" id="NavigationTitleBar" data-icon="false">
+                        <a href="http://leg.wa.gov" style="background-color: #2B674D; border-color: #2B674D; text-decoration:none; color:white"><span>Legislature Home</span></a>
+                    </li>
+                </ul>
+                <ul class="root ms-core-listMenu-root static ui-listview ui-group-theme-b ui-theme-b" id="zz2_RootAspMenu" data-theme="b" data-role="listview" data-inset="false">
+                    <li class="static ui-first-child" data-icon="false"><a href="http://leg.wa.gov/house/" title="House" tabindex="0" class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode navSectionContentLink ui-btn"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">House of Representatives</span></span></a></li>
+                    <li class="static" data-icon="false"><a href="http://leg.wa.gov/senate/" title="Senate" tabindex="0" class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode navSectionContentLink ui-btn"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Senate</span></span></a></li>
+                    <li class="static" data-icon="false">
+                        <a href="http://app.leg.wa.gov/districtfinder" title="Find Your District" tabindex="0" class="visible-md visible-lg static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode navSectionContentLink ui-btn"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Find Your District</span></span></a>
+                        <a href="http://app.leg.wa.gov/mobile/FindYourLegislator/" title="Find Your District" tabindex="0" class="hidden-md hidden-lg static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode navSectionContentLink ui-btn"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Find Your District</span></span></a>
+                  </li>
+                    <li class="static" data-icon="false"><a href="http://leg.wa.gov/LawsAndAgencyRules/" title="Laws and Agency Rules" tabindex="0" class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode navSectionContentLink ui-btn"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Laws & Agency Rules</span></span></a></li>
+                    <li class="static" data-icon="false"><a href="http://apps.leg.wa.gov/billinfo/" title="Bill Information" tabindex="0" class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode navSectionContentLink ui-btn"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Bill Information</span></span></a></li>
+                    <li class="static" data-icon="false"><a href="http://leg.wa.gov/legislature/Pages/Calendar.aspx" title="Agendas, Schedules, and Calendars" tabindex="0" class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode navSectionContentLink ui-btn"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Agendas, Schedules, and Calendars</span></span></a></li>
+                    <li class="static" data-icon="false"><a href="http://leg.wa.gov/legislature/Pages/CommitteeListing.aspx" title="Legislative Committees" tabindex="0" class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode navSectionContentLink ui-btn"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Legislative Committees</span></span></a></li>
+                    <li class="static" data-icon="false"><a href="http://leg.wa.gov/legislature/Pages/ComingToTheLegislature.aspx" title="Visiting the Legislature" tabindex="0" class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode navSectionContentLink ui-btn"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Coming to the Legislature</span></span></a></li>
+                    <li class="static" data-icon="false"><a href="http://leg.wa.gov/legislature/Pages/LegislativeAgencies.aspx" title="Legislative Agencies" tabindex="0" class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode navSectionContentLink ui-btn"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Legislative Agencies</span></span></a></li>
+                    <li class="static" data-icon="false"><a href="http://leg.wa.gov/lic" title="Legislative Information Center" tabindex="0" class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode navSectionContentLink ui-btn"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Legislative Information Center</span></span></a></li>
+                    <li class="static" data-icon="false"><a href="https://public.govdelivery.com:443/accounts/WALEG/subscriber/new" title="E-mail Notifications" tabindex="0" class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode navSectionContentLink ui-btn"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Email Updates (GovDelivery)</span></span></a></li>
+                    <li class="static ui-last-child"><a data-ajax="false" href="#footerAnchor" class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode navSectionContentLink ui-btn"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">View All Links</span></span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul data-role="listview" id="permanentLinks" style="display: none;" data-theme="b" data-inset="false" class="ui-listview ui-group-theme-b ui-theme-b">
+            <li data-role="list-divider" data-icon="false" role="heading" class="ui-li-divider ui-bar-b ui-first-child">
+                Main Sections
+            </li>
+            <li data-icon="false">
+                <a class="navSectionContentLink ui-btn" href="http://leg.wa.gov">
+                    Legislature Home
+                </a>
+            </li>
+            <li data-icon="false">
+                <a class="navSectionContentLink ui-btn" href="http://leg.wa.gov/house">
+                    House of Representatives
+                </a>
+            </li>
+            <li data-icon="false">
+                <a class="navSectionContentLink ui-btn" href="http://leg.wa.gov/senate">
+                    Senate
+                </a>
+            </li>
+            <li data-icon="false">
+                <a class="visible-md visible-lg navSectionContentLink ui-btn" href="http://app.leg.wa.gov/DistrictFinder/">
+                    Find Your District
+                </a>
+                <a class="navSectionContentLink ui-btn hidden-md hidden-lg " href="http://app.leg.wa.gov/mobile/FindYourLegislator/">
+                    Find Your District
+                </a>
+            </li>
+            <li data-icon="false">
+                <a class="navSectionContentLink ui-btn" href="http://leg.wa.gov/LawsAndAgencyRules/LawsAndAgencyRules">
+                    Laws & Agency Rules
+                </a>
+            </li>
+            <li data-icon="false">
+                <a class="navSectionContentLink ui-btn" href="http://app.leg.wa.gov/billinfo/">
+                    Bill Information
+                </a>
+            </li>
+            <li data-icon="false">
+                <a class="navSectionContentLink ui-btn" href="http://leg.wa.gov/legislature/Pages/Calendar.aspx">
+                    Agendas, Schedules, & Calendars
+                </a>
+            </li>
+            <li data-icon="false">
+                <a class="navSectionContentLink ui-btn" href="http://leg.wa.gov/legislature/Pages/CommitteeListing.aspx">
+                    Legislative Committees
+                </a>
+            </li>
+            <li data-icon="false">
+                <a class="navSectionContentLink ui-btn" href="http://leg.wa.gov/legislature/Pages/LegislativeAgencies.aspx">
+                    Legislative Agencies
+                </a>
+            </li>
+            <li data-icon="false">
+                <a class="navSectionContentLink ui-btn" href="http://leg.wa.gov/lic/">
+                    Legislative Information Center 
+                </a>
+            </li>
+            <li data-icon="false">
+                <a class="navSectionContentLink ui-btn" href="https://public.govdelivery.com/accounts/WALEG/subscriber/new">
+                    Email Updates (GovDelivery)
+                </a>
+            </li>
+            <li data-icon="false" class="ui-last-child">
+                <a data-ajax="false" class="navSectionContentLink ui-btn" href="#footerAnchor">
+                    View all links
+                </a>
+            </li>
+        </ul>
+    
+        <div class="ui-content" role="main">
+            <div class="desktopSideNavParentContainer">
+                <div id="desktopNavigation">
+                </div>
+            </div>
+            <div id="pageWrapper" role="main" class="ui-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <form name="aspnetForm" method="post" action="./default.aspx?cite=1.04&amp;full=true" id="aspnetForm">
+<div>
+<input type="hidden" name="__RESUBMIT" id="__RESUBMIT" value="0" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+                                <div id="divContent" class="noscroll">
+                                    <div class="row">
+                                        <div id="divPrint" class="col-csm-7 col-csm-push-5 text-right">
+                                            <a id="aPrint" onclick="javascript:window.print();">Print</a>
+                                        </div>
+                                        <div id="divBreadCrumb" class="col-csm-5 col-csm-pull-7">
+                                            <!-- phBreadcrumb start -->
+                                            <span class="breadCrumbClass"><a href="default.aspx">RCWs</a> > <a href="default.aspx?cite=1">Title 1</a> > <a href="default.aspx?cite=1.04">Chapter 1.04</a></span><br /><br />
+                                            <!-- phBreadcrumb end -->
+                                        </div>
+                                    </div>
+                                    
+    
+
+    <div class="row">
+        <div class="col-csm-6 col-csm-push-6 text-right">             
+            
+        </div>
+        <div class="col-csm-6 col-csm-pull-6">
+            <h4>Chapter 1.04 RCW</h4>
+        </div>
+    </div>
+
+    <div class="row clearfix">
+        <div class="col-csm-12">
+            <h4>THE CODE</h4>
+        </div>
+    </div>
+
+    
+    
+    <div id="ctl00_ContentPlaceHolder1_pnlListing">
+	
+        <div id="divChapterDispoLinks">
+        <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=1.04'>Chapter Listing</a><br><br>
+        
+        </div>
+        
+        
+        
+        
+        
+    
+</div>
+    <div id='contentWrapper'><div style="font-weight:bold;padding-top:1em;padding-bottom:0.5em;margin-left:0in;"><span>Sections</span></div><table cellpadding="0" cellspacing="0" style="text-align:left;margin-left:0.000px;"><tbody><tr><td /><td style="width:688.333px" /></tr><tr><td valign="top" style="padding-right:24pt;"><div style="font-weight:normal;"> <a href="#1.04.010">1.04.010</a></div></td><td valign="top"><div style="font-weight:normal;text-indent:-0.25in;margin-left:24.000px;">Revised Code of Washington enacted.</div></td></tr><tr><td valign="top" style="padding-right:24pt;"><div style="font-weight:normal;"> <a href="#1.04.013">1.04.013</a></div></td><td valign="top"><div style="font-weight:normal;text-indent:-0.25in;margin-left:24.000px;">1950 Supplement enacted.</div></td></tr><tr><td valign="top" style="padding-right:24pt;"><div style="font-weight:normal;"> <a href="#1.04.014">1.04.014</a></div></td><td valign="top"><div style="font-weight:normal;text-indent:-0.25in;margin-left:24.000px;">Numbering system adopted<span style="font-family:Times New Roman;text-indent:-0.25in;">—</span>Application.</div></td></tr><tr><td valign="top" style="padding-right:24pt;"><div style="font-weight:normal;"> <a href="#1.04.015">1.04.015</a></div></td><td valign="top"><div style="font-weight:normal;text-indent:-0.25in;margin-left:24.000px;">Numbering new sections, chapters<span style="font-family:Times New Roman;text-indent:-0.25in;">—</span>Corrections.</div></td></tr><tr><td valign="top" style="padding-right:24pt;"><div style="font-weight:normal;"> <a href="#1.04.016">1.04.016</a></div></td><td valign="top"><div style="font-weight:normal;text-indent:-0.25in;margin-left:24.000px;">Expansion of numbering system<span style="font-family:Times New Roman;text-indent:-0.25in;">—</span>Decimal factor.</div></td></tr><tr><td valign="top" style="padding-right:24pt;"><div style="font-weight:normal;"> <a href="#1.04.020">1.04.020</a></div></td><td valign="top"><div style="font-weight:normal;text-indent:-0.25in;margin-left:24.000px;">Code as evidence of the law<span style="font-family:Times New Roman;text-indent:-0.25in;">—</span>Rule of construction<span style="font-family:Times New Roman;text-indent:-0.25in;">—</span>Effect of amendment.</div></td></tr><tr><td valign="top" style="padding-right:24pt;"><div style="font-weight:normal;"> <a href="#1.04.021">1.04.021</a></div></td><td valign="top"><div style="font-weight:normal;text-indent:-0.25in;margin-left:24.000px;">Rule of construction<span style="font-family:Times New Roman;text-indent:-0.25in;">—</span>Prima facie law.</div></td></tr><tr><td valign="top" style="padding-right:24pt;"><div style="font-weight:normal;"> <a href="#1.04.030">1.04.030</a></div></td><td valign="top"><div style="font-weight:normal;text-indent:-0.25in;margin-left:24.000px;">New laws to be added to code.</div></td></tr><tr><td valign="top" style="padding-right:24pt;"><div style="font-weight:normal;"> <a href="#1.04.040">1.04.040</a></div></td><td valign="top"><div style="font-weight:normal;text-indent:-0.25in;margin-left:24.000px;">Code may be cited as "RCW."</div></td></tr></tbody></table><div style="font-weight:bold;padding-top:1em;">NOTES:</div><div style="margin-top:1em;"><div style="font-style:italic;text-indent:-0.25in;margin-left:24.000px;">Code reviser: Chapter  <a href="http://app.leg.wa.gov/RCW/default.aspx?cite=1.08">1.08</a> RCW.</div></div><div style="margin-top:1em;"><div style="font-style:italic;text-indent:-0.25in;margin-left:24.000px;">Legislature to amend or repeal laws by reference to code numbers: RCW  <a href="http://app.leg.wa.gov/RCW/default.aspx?cite=1.08.050">1.08.050</a>.</div></div><div style="margin-top:1em;"><div style="font-style:italic;text-indent:-0.25in;margin-left:24.000px;">Statute law committee: Chapter  <a href="http://app.leg.wa.gov/RCW/default.aspx?cite=1.08">1.08</a> RCW.</div></div></div>
+    <div id="ctl00_ContentPlaceHolder1_pnlExpanded">
+	
+        <span id="ctl00_ContentPlaceHolder1_dlSectionContent"><span>
+                <br>
+                <hr>
+                <a name='1.04.010' ></a><h3>1.04.010<br>Revised Code of Washington enacted.</h3><div style="text-indent:0.25in;margin-left:0in;">The ninety-one titles with chapters and sections designated as the "Revised Code of Washington" and attested by the secretary of the senate and the chief clerk of the house of representatives of the legislature of the state of Washington, are hereby enacted and designated as the "Revised Code of Washington." Said code is intended to embrace in a revised, consolidated, and codified form and arrangement all the laws of the state of a general and permanent nature.</div><div style="margin-top: 1em" class="lawreference">[ <a href="http://leg.wa.gov/CodeReviser/documents/sessionlaw/1951c5.pdf?cite=1951 c 5 § 2;">1951 c 5 § 2;</a>  <a href="http://leg.wa.gov/CodeReviser/documents/sessionlaw/1950ex1c16.pdf?cite=1950 ex.s. c 16 § 1.">1950 ex.s. c 16 § 1.</a>]</div><div style="margin-top: 1em" class="lawreference"><div style="font-weight:bold;padding-top:1em;">NOTES:</div><div style="margin-top:1em;"><div style="font-style:italic;text-indent:-0.25in;margin-left:24.000px;">Creation of new code titles authorized, effect: RCW  <a href="http://app.leg.wa.gov/RCW/default.aspx?cite=1.08.015">1.08.015</a>.</div></div></div>
+            </span><br /><span>
+                <br>
+                <hr>
+                <a name='1.04.013' ></a><h3>1.04.013<br>1950 Supplement enacted.</h3><div style="text-indent:0.25in;margin-left:0in;">The titles, chapters, and sections designated as the "1950 Supplement to the Revised Code of Washington" attested by the secretary of the senate and the chief clerk of the house of representatives of the legislature of the state of Washington, and filed with the secretary of state, are hereby enacted and consolidated into and with the Revised Code of Washington. Said 1950 supplement is intended to embrace (1) in a revised and codified form, all those laws of the state of Washington of a general and permanent nature enacted since January 1, 1949, (2) revision and recodification of certain of the titles, chapters, and sections of the revised code, and (3) application of a new system of numbering to all of the sections and certain of the chapters of the revised code, subject to RCW  <a href="#1.04.014">1.04.014</a>.</div><div style="margin-top: 1em" class="lawreference">[ <a href="http://leg.wa.gov/CodeReviser/documents/sessionlaw/1951c5.pdf?cite=1951 c 5 § 1.">1951 c 5 § 1.</a>]</div><div style="margin-top: 1em" class="lawreference"></div>
+            </span><br /><span>
+                <br>
+                <hr>
+                <a name='1.04.014' ></a><h3>1.04.014<br>Numbering system adopted—Application.</h3><div style="text-indent:0.25in;margin-left:0in;">The system of numbering employed in the 1950 supplement is hereby adopted as the general system to be followed in designating sections of the revised code. Specific numbers, in accordance with such system, are authorized to be assigned to sections of the revised code as follows:</div><div style="text-indent:0.25in;margin-left:0in;">Those chapters and sections of the revised code expressly numbered or renumbered in the 1950 supplement are authorized to be numbered or renumbered to the new number respectively shown in the 1950 supplement. All other sections of the revised code now existing are authorized to be renumbered by tens according to the plan generally used in the 1950 supplement, using the number of the title, the new number, if any, of the chapter in which the section occurs, and adding the digit "0" to the terminal end of the number marking the position of the section within the chapter. The secretary of state shall, before publication of any laws enacted at this session of the legislature which are by their terms expressly amendatory of any section or sections contained in the revised code or the 1950 supplement, renumber each section and correlate the numbers of sections so renumbered, in accordance with this provision, so that each such section when published bears or is referred to by its proper new number. The secretary of state, in publishing the session laws of this thirty-second session of the legislature shall use therein the applicable new numbers of the respective sections so renumbered.</div><div style="margin-top: 1em" class="lawreference">[ <a href="http://leg.wa.gov/CodeReviser/documents/sessionlaw/1951c5.pdf?cite=1951 c 5 § 3.">1951 c 5 § 3.</a>]</div><div style="margin-top: 1em" class="lawreference"></div>
+            </span><br /><span>
+                <br>
+                <hr>
+                <a name='1.04.015' ></a><h3>1.04.015<br>Numbering new sections, chapters—Corrections.</h3><div style="text-indent:0.25in;margin-left:0in;">New chapters or sections added to the Revised Code of Washington (as supplemented or modified by the 1950 supplement), as the result of laws enacted at this or subsequent sessions of the legislature, shall be numbered in harmony with said general numbering system, and shall bear such respective numbers in accordance therewith as may be assigned by such official or agency as may be expressly authorized by law so to do.</div><div style="text-indent:0.25in;margin-left:0in;">This section shall not prohibit or prevent the correction by any such official or agency, of the number of any section of the revised code found clearly to be incorrectly numbered or incorrectly correlated with other sections as to number.</div><div style="margin-top: 1em" class="lawreference">[ <a href="http://leg.wa.gov/CodeReviser/documents/sessionlaw/1951c5.pdf?cite=1951 c 5 § 4.">1951 c 5 § 4.</a>]</div><div style="margin-top: 1em" class="lawreference"></div>
+            </span><br /><span>
+                <br>
+                <hr>
+                <a name='1.04.016' ></a><h3>1.04.016<br>Expansion of numbering system—Decimal factor.</h3><div style="text-indent:0.25in;margin-left:0in;">It is the intent that under said numbering system the section factor of the section number shall be treated as a decimal figure, and where new sections must hereafter in codifying be inserted between sections then already consecutively numbered, the proper number for such new section shall be created by the insertion of an additional digit at the terminal end of the number of the section immediately preceding the location at which such new section is to be inserted.</div><div style="margin-top: 1em" class="lawreference">[ <a href="http://leg.wa.gov/CodeReviser/documents/sessionlaw/1951c5.pdf?cite=1951 c 5 § 5.">1951 c 5 § 5.</a>]</div><div style="margin-top: 1em" class="lawreference"></div>
+            </span><br /><span>
+                <br>
+                <hr>
+                <a name='1.04.020' ></a><h3>1.04.020<br>Code as evidence of the law—Rule of construction—Effect of amendment.</h3><div style="text-indent:0.25in;margin-left:0in;">The contents of the Revised Code of Washington, after striking therefrom sections repealed or superseded by laws of the state of Washington enacted since January 1, 1949, as the revised code is supplemented or modified in the 1950 supplement, shall establish the laws of this state of a general and permanent nature in effect on January 1, 1951; except, that nothing herein shall be construed as changing the meaning of any such laws and, as a rule of construction, in case of any omissions or any inconsistency between any of the provisions of the revised code as so supplemented or modified and the laws existing immediately preceding this enactment, the previously existing laws shall control. Any section of the Revised Code of Washington (as supplemented or modified by the 1950 supplement) expressly amended by the legislature, including the entire context set out, shall, as so amended, constitute the law and the ultimate declaration of legislative intent.</div><div style="margin-top: 1em" class="lawreference">[ <a href="http://leg.wa.gov/CodeReviser/documents/sessionlaw/1951c5.pdf?cite=1951 c 5 § 6.">1951 c 5 § 6.</a>]</div><div style="margin-top: 1em" class="lawreference"></div>
+            </span><br /><span>
+                <br>
+                <hr>
+                <a name='1.04.021' ></a><h3>1.04.021<br>Rule of construction—Prima facie law.</h3><div style="text-indent:0.25in;margin-left:0in;">The contents of said code shall establish prima facie the laws of this state of a general and permanent nature in effect on January 1, 1949, but nothing herein shall be construed as changing the meaning of any such laws. In case of any omissions, or any inconsistency between any of the provisions of said code and the laws existing immediately preceding this enactment, the previously existing laws shall control.</div><div style="margin-top: 1em" class="lawreference">[ <a href="http://leg.wa.gov/CodeReviser/documents/sessionlaw/1950ex1c16.pdf?cite=1950 ex.s. c 16 § 2.">1950 ex.s. c 16 § 2.</a>]</div><div style="margin-top: 1em" class="lawreference"></div>
+            </span><br /><span>
+                <br>
+                <hr>
+                <a name='1.04.030' ></a><h3>1.04.030<br>New laws to be added to code.</h3><div style="text-indent:0.25in;margin-left:0in;">All laws of a general and permanent nature enacted after January 1, 1949, shall, from time to time, be incorporated into and become a part of said code.</div><div style="margin-top: 1em" class="lawreference">[ <a href="http://leg.wa.gov/CodeReviser/documents/sessionlaw/1950ex1c16.pdf?cite=1950 ex.s. c 16 § 3.">1950 ex.s. c 16 § 3.</a>]</div><div style="margin-top: 1em" class="lawreference"></div>
+            </span><br /><span>
+                <br>
+                <hr>
+                <a name='1.04.040' ></a><h3>1.04.040<br>Code may be cited as "RCW."</h3><div style="text-indent:0.25in;margin-left:0in;">The code may be cited by the abbreviation "RCW."</div><div style="margin-top: 1em" class="lawreference">[ <a href="http://leg.wa.gov/CodeReviser/documents/sessionlaw/1950ex1c16.pdf?cite=1950 ex.s. c 16 § 4.">1950 ex.s. c 16 § 4.</a>]</div><div style="margin-top: 1em" class="lawreference"></div>
+            </span></span>
+    
+</div>
+
+                                </div>
+
+                            
+<script type='text/javascript'>var gaJsHost=(('https:'==document.location.protocol)?'https://ssl.':'http://www.');var g_a_scr=document.createElement('script');g_a_scr.setAttribute('type','text/javascript');g_a_scr.setAttribute('src',gaJsHost+'google-analytics.com/ga.js');var g_a_scr2=document.createElement('script');g_a_scr2.setAttribute('type','text/javascript');g_a_scr2.text="try{var pageTracker=_gat._getTracker('UA-798075-3');pageTracker._trackPageview();}catch(e){}";document.body.insertBefore(g_a_scr,document.body.firstChild);setTimeout(function(){document.body.insertBefore(g_a_scr2,document.body.firstChild.nextSibling);},1);</script></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="publicSiteFooter ui-body-b" id="footerAnchor" name="footerAnchor">
+            <div style="text-align:center; margin-top:6px; margin-bottom:6px">
+                <span style="font-family:Open Sans,Helvetica, Arial, sans-serif; font-size:1.2em; font-weight:700">Site Contents</span><br>
+                Selected content listed in alphabetical order under each group
+            </div>
+            <div class="row">
+                <div class="col-csm-6 col-md-3">
+                    <ul>
+                        <li class="footerHead">
+                            Let Your Voice Be Heard
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/legislature/Pages/ComingToTheLegislature.aspx">
+                                Come to the Legislature
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://app.leg.wa.gov/pbc/">
+                                Comment on a Bill
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://app.leg.wa.gov/memberemail/">
+                                Contact Your Legislators
+                            </a>
+                        </li>
+                        <br>
+                        <li class="footerHead">
+                            Find
+                        </li>
+                        <li>
+                            <a href="http://app.leg.wa.gov/billinfo/">
+                                Bills
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/legislature/Pages/Calendar.aspx">
+                                Committee Meeting Schedules & Agendas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://app.leg.wa.gov/DistrictFinder/">
+                                District & Legislators
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/LawsAndAgencyRules/">
+                                Laws & Rules
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/legislature/Pages/MemberInformation.aspx">
+                                Member Information / Rosters
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.tvw.org/" target="_blank">
+                                Video & Audio on TVW
+                            </a>
+                        </li>
+                    </ul>
+                    <br>
+                </div>
+                <div class="col-csm-6 col-md-3">
+                    <ul>
+                        <li class="footerHead">
+                            About the Legislature
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/legislature/Pages/CommitteeListing.aspx">
+                                Committees
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/House">
+                                House of Representatives
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/legislature/pages/legislativeagencies.aspx">
+                                Legislative Agencies
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/lic">
+                                Legislative Information Center
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/">
+                                Legislature Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/Senate">
+                                Senate
+                            </a>
+                        </li>
+                        <br>
+                        <li class="footerHead">
+                            Track Legislation
+                        </li>
+                        <li>
+                            <a href="http://app.leg.wa.gov/DLR/user/login.aspx?ReturnUrl=%2fdlr%2fbilltracking%2fdefault.aspx">
+                                Bills
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://public.govdelivery.com/accounts/WALEG/subscriber/new">
+                                Email Updates (GovDelivery)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/legislature/Pages/AboutLegRSS.aspx">
+                                RSS Feeds
+                           </a>
+                        </li>
+                        <li>
+                            <a href="http://wslwebservices.leg.wa.gov/">
+                                Web Services
+                            </a>
+                        </li>
+                    </ul>
+                    <br>
+                </div>
+                <div class="clearfix visible-csm">
+                </div>
+                <div class="clearfix visible-sm">
+                </div>
+                <div class="col-csm-6 col-md-3">
+                    <ul>
+                        <li class="footerHead">
+                            Additional Information
+                       </li>
+                        <li>
+                            <a href="http://leg.wa.gov/legislature/pages/adainfo.aspx">
+                                Accessibility Information
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/civiced/Pages/default.aspx">
+                                Civic Education
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:support@leg.wa.gov">
+                                Comments about this site
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/legislature/pages/contactus.aspx">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/legislature/pages/disclaimer.aspx">
+                                Disclaimer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/legislature/Pages/WSLEmployment.aspx">
+                                Employment Opportunities
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/giftcenter">
+                                Gift Center
+                           </a>
+                        </li>
+                        <li>
+                            <a href="http://app.leg.wa.gov/billinfo/glossary.aspx">
+                                Glossary of Terms
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/help/Pages/default.aspx">
+                                Help
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/history">
+                                History of the State Legislature
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://leg.wa.gov/legislature/pages/PrivacyNotice.aspx">
+                                Privacy Notice
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://app.leg.wa.gov/reportstothelegislature/">
+                                Reports to the Legislature
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://search.leg.wa.gov/">
+                                Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-csm-6 col-md-3  pull-left">
+                    <ul>
+                        <li class="footerHead">
+                            Outside the Legislature
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://app.leg.wa.gov/DistrictFinder/?congress=1">
+                                Congress - the Other Washington
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.governor.wa.gov/">
+                                Governor's Website
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://fortress.wa.gov/ofm/fnspublic">
+                                OFM Fiscal Note Website
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.courts.wa.gov/">
+                                Washington Courts
+                            </a>
+                        </li>
+                    </ul>
+                    <br>
+                    <div class="footerHead">
+                        Translate
+
+
+
+                    </div>
+                    <div id="google_translate_element">
+                    </div>
+                    <script type="text/javascript">
+                        //<![CDATA[
+
+                        function googleTranslateElementInit() {
+                            try {
+                                new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                            } catch (e) {
+
+                            }
+                        }
+                        //]]>
+                    </script>
+                    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                        //<![CDATA[
+
+                        //]]>
+                    </script>
+                </div>
+            </div>
+        </div>
+
+    
+    </div>
+
+</body>
+</html>
