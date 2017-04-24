@@ -3,7 +3,7 @@ import { expect } from 'chai'
 
 import * as fs from 'fs'
 import scrape from './scraper'
-import { text, attr } from './scraper'
+import { text, attr, map } from './scraper'
 
 describe('scrape', () => {
   const source = fs.readFileSync('./fixtures/chapter1.html')
@@ -36,7 +36,8 @@ describe('scrape', () => {
     })
   })
 
-  context('helpers', () => {
+  describe('helpers', () => {
+    // TODO: children, reject, join, until, contains, find, has
     describe('text', () => {
       it('extracts text from a result', () => {
         const schema = ['.col-csm-6 h4', text()]
@@ -47,11 +48,21 @@ describe('scrape', () => {
     })
 
     describe('attr', () => {
-      it.only('extracts attributes from a result', () => {
+      it('extracts attributes from a result', () => {
         const schema = ['#divChapterDispoLinks a', attr('href')]
         const result = scrape(source, schema)
 
         expect(result).to.equal('http://app.leg.wa.gov/RCW/default.aspx?cite=1.04')
+      })
+    })
+
+    describe('map', () => {
+      it('maps a schema to a list of elements', () => {
+        const schema = ['li', map({ foo: ['span', text()] })]
+        const source = '<ul><li><span>some</span> but not me</li><li><span>elements!</span>'
+        const result = scrape(source, schema)
+
+        expect(result).to.deep.equal([ { foo: 'some' }, { foo: 'elements!' }])
       })
     })
   })

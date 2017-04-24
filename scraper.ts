@@ -20,10 +20,13 @@ const scrape = (source, schema) => {
 
 export default scrape
 
-export const text = () => (el) => {
-  return el.text()
-}
+export const text = () => (el) => el.text()
 
-export const attr = (attrName) => (el) => {
-  return el.attr(attrName)
+export const attr = (attrName) => (el) => el.attr(attrName)
+
+export const map = (schema) => (els:Cheerio) => {
+  return els.map((i, el) => {
+    const $ = cheerio.load(el)
+    return performScrape($.root(), schema)
+  }).get()
 }
