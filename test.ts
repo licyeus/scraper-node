@@ -3,10 +3,10 @@ import { expect } from 'chai'
 
 import * as fs from 'fs'
 import scrape from './scraper'
-import { text, attr, map } from './scraper'
+import { text, attr, map, contents } from './scraper'
 
 describe('scrape', () => {
-  const source = fs.readFileSync('./fixtures/chapter1.html')
+  const source = fs.readFileSync('./fixtures/chapter1.html', 'utf8')
 
   it('scrapes from a given schema', () => {
     const schema = '.col-csm-6 h4'
@@ -37,7 +37,7 @@ describe('scrape', () => {
   })
 
   describe('helpers', () => {
-    // TODO: children, reject, join, until, contains, find, has
+    // TODO: reject, join, until, contains, find, has
     describe('text', () => {
       it('extracts text from a result', () => {
         const schema = ['.col-csm-6 h4', text()]
@@ -65,5 +65,16 @@ describe('scrape', () => {
         expect(result).to.deep.equal([ { foo: 'some' }, { foo: 'elements!' }])
       })
     })
+
+    describe('contents', () => {
+      it('returns a list of direct child elements and text nodes', () => {
+        const schema = ['#foo', contents()]
+        const source = '<div id="foo">text <span>bar</span> another</div>'
+        const result = scrape(source, schema)
+
+        expect(result.length).to.equal(3)
+      })
+    })
+
   })
 })

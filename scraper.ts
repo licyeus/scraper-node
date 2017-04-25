@@ -13,16 +13,16 @@ const performScrape = (selection:Cheerio, schema) => {
   }
 }
 
-const scrape = (source, schema) => {
+const scrape = (source:string, schema) => {
   const $ = cheerio.load(source)
   return performScrape($.root(), schema)
 }
 
 export default scrape
 
-export const text = () => (el) => el.text()
+export const text = () => (el:Cheerio) => el.text()
 
-export const attr = (attrName) => (el) => el.attr(attrName)
+export const attr = (attrName:string) => (el:Cheerio) => el.attr(attrName)
 
 export const map = (schema) => (els:Cheerio) => {
   return els.map((i, el) => {
@@ -30,3 +30,5 @@ export const map = (schema) => (els:Cheerio) => {
     return performScrape($.root(), schema)
   }).get()
 }
+
+export const contents = () => (els:Cheerio) => els.contents()
