@@ -3,7 +3,7 @@ import { expect } from 'chai'
 
 import * as fs from 'fs'
 import scrape from './scraper'
-import { text, attr, map, contents } from './scraper'
+import { text, attr, map, contents, has } from './scraper'
 
 describe('scrape', () => {
   const source = fs.readFileSync('./fixtures/chapter1.html', 'utf8')
@@ -73,6 +73,16 @@ describe('scrape', () => {
         const result = scrape(source, schema)
 
         expect(result.length).to.equal(3)
+      })
+    })
+
+    describe('has', () => {
+      it('returns nodes where selector matches', () => {
+        const schema = ['span', has('a')]
+        const source = '<div><span><a>me</a></span><span><a>and me</a></span><span>but not me</span></div>'
+        const result = scrape(source, schema)
+
+        expect(result.length).to.equal(2)
       })
     })
 
