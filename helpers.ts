@@ -18,3 +18,7 @@ export function contents () {
 export function has (selector: string) {
   return (sel: Cheerio) => sel.has(selector)
 }
+
+export function find (selector: string) {
+  return (sel: Cheerio) => sel.find(selector)
+}

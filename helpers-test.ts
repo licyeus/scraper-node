@@ -3,7 +3,7 @@ import { expect } from 'chai'
 
 import * as fs from 'fs'
 import scrape from './scraper'
-import { text, attr, map, contents, has } from './scraper'
+import { text, attr, map, contents, has, find } from './scraper'
 
 describe('helpers', () => {
   // each item in array is descriptor of operation and yields a selection
@@ -39,9 +39,19 @@ describe('helpers', () => {
   })
 
   describe('has', () => {
-    it('returns nodes where selector matches', () => {
+    it('returns nodes where selector has matching children', () => {
       const schema = ['span', has('a')]
       const source = '<div><span><a>me</a></span><span><a>and me</a></span><span>but not me</span></div>'
+      const result = scrape(source, schema)
+
+      expect(result.length).to.equal(2)
+    })
+  })
+
+  describe('find', () => {
+    it('returns nodes where selector matches', () => {
+      const schema = [find('.findme')]
+      const source = '<div><span class="findme">asdf</span><span>but not me</span><span class="findme alsome">qwerty</span>'
       const result = scrape(source, schema)
 
       expect(result.length).to.equal(2)
