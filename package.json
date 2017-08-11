@@ -5,15 +5,19 @@
   "author": "Andrew Sullivan <andrew@inkblot.io>",
   "license": "MIT",
   "scripts": {
-    "dev-test-watch": "mocha-typescript-watch"
+    "test": "mocha --compilers ts:ts-node/register,tsx:ts-node/register",
+    "test:watch": "mocha --compilers ts:ts-node/register,tsx:ts-node/register -w"
   },
   "dependencies": {
     "@types/cheerio": "^0.22.1",
     "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.13",
+    "cheerio": "^0.22.0"
+  },
+  "devDependencies": {
     "chai": "^3.5.0",
-    "cheerio": "^0.22.0",
     "mocha": "^3.2.0",
-    "mocha-typescript": "^1.0.23"
+    "ts-node": "^3.3.0",
+    "typescript": "^2.4.2"
   }
 }

@@ -6,7 +6,8 @@ import scrape from './scraper'
 import { text, attr, map, contents, has } from './scraper'
 
 describe('helpers', () => {
-  // TODO: reject, join, until, contains, find, has
+  // each item in array is descriptor of operation and yields a selection
+  // TODO: map, reduce, until, after, find, filter, reject, contains, attr, join, tap, split, inspect, text, children, is
   const source = fs.readFileSync('./fixtures/chapter1.html', 'utf8')
 
   describe('text', () => {
