@@ -1,6 +1,6 @@
 import * as cheerio from 'cheerio'
 
-const performScrape = (selection: Cheerio, schema) => {
+function performScrape (selection: Cheerio, schema) {
   if (schema instanceof Array) {
     return schema.reduce((acc, def) => performScrape(acc, def), selection)
   } else if (schema instanceof Function) {
@@ -13,21 +13,17 @@ const performScrape = (selection: Cheerio, schema) => {
   }
 }
 
-const scrape = (source: string, schema) => {
-  const $ = cheerio.load(source)
-  return performScrape($.root(), schema)
+function scrape (source: string, schema) {
+  return performScrape(cheerio.load(source).root(), schema)
 }
 
+function map (schema) {
+  return (sel: Cheerio) =>
+    sel.map((i, el) =>
+      performScrape(cheerio.load(el).root(), schema)
+    ).get()
+}
+
+export { map }
+export * from './helpers'
 export default scrape
-
-export const text = () => (el: Cheerio) => el.text()
-
-export const attr = (attrName: string) => (el: Cheerio) => el.attr(attrName)
-
-export const map = (schema) => (els: Cheerio) => {
-  return els.map((i, el) => performScrape(cheerio.load(el).root(), schema)).get()
-}
-
-export const contents = () => (els: Cheerio) => els.contents()
-
-export const has = (selector:string) => (el: Cheerio) => el.has(selector)
