@@ -3,11 +3,10 @@ import { expect } from 'chai'
 
 import * as fs from 'fs'
 import scrape from './scraper'
-import { text, attr, map, contents, has, find } from './scraper'
+import { text, attr, map, contents, has, find, children, filter, reject } from './scraper'
 
 describe('helpers', () => {
   // each item in array is descriptor of operation and yields a selection
-  // TODO: map, reduce, until, after, find, filter, reject, contains, attr, join, tap, split, inspect, text, children, is
   const source = fs.readFileSync('./fixtures/chapter1.html', 'utf8')
 
   describe('text', () => {
@@ -56,6 +55,88 @@ describe('helpers', () => {
 
       expect(result.length).to.equal(2)
     })
+  })
+
+  describe('children', () => {
+    it('selects children of the current selection', () => {
+      const schema = ['#sel', children()]
+      const source = '<div id="sel"><span>a child</span><div>another child</div></div><div><span>not me</span></div>'
+      const result = scrape(source, schema)
+
+      expect(result.length).to.equal(2)
+    })
+  })
+
+  describe('filter', () => {
+    const source = '<ul><li class="foo">find me</li><li class="bar">not me</li><li class="foo bar"><span>and me</span></li><ul>'
+
+    it('filters a selection, returning elements that match the given selector', () => {
+      const schema = ['li', filter('.foo')]
+      const result = scrape(source, schema)
+
+      expect(result.length).to.equal(2)
+    })
+
+    it('can be provided a selector fn', () => {
+      const schema = ['li', filter(has('span'))]
+      const result = scrape(source, schema)
+
+      expect(result.length).to.equal(1)
+    })
+  })
+
+  describe('reject', () => {
+    const source = '<ul><li class="foo">find me</li><li class="bar">not me</li><li class="foo bar"><span>and me</span></li><ul>'
+
+    it('filters a selection, returning elements that do not match the given selector', () => {
+      const schema = ['li', reject('.foo')]
+      const result = scrape(source, schema)
+
+      expect(result.length).to.equal(1)
+    })
+
+    it('can be provided a selector fn', () => {
+      const schema = ['li', reject(has('span'))]
+      const result = scrape(source, schema)
+
+      expect(result.length).to.equal(2)
+    })
+  })
+
+  describe('is', () => {
+    it('')
+  })
+
+  describe('join', () => {
+    it('')
+  })
+
+  describe('until', () => {
+    it('')
+  })
+
+  describe('contains', () => {
+    it('')
+  })
+
+  describe('reduce', () => {
+    it('')
+  })
+
+  describe('after', () => {
+    it('')
+  })
+
+  describe('tap', () => {
+    it('')
+  })
+
+  describe('split', () => {
+    it('')
+  })
+
+  describe('inspect', () => {
+    it('')
   })
 
 })

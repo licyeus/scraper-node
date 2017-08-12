@@ -22,3 +22,28 @@ export function has (selector: string) {
 export function find (selector: string) {
   return (sel: Cheerio) => sel.find(selector)
 }
+
+export function children () {
+  return (sel: Cheerio) => sel.children()
+}
+
+export function filter (selector: string | Function) {
+  if (typeof selector === 'string') {
+    return (sel: Cheerio) => sel.filter(selector)
+  } else {
+    return (sel: Cheerio) => sel.filter(function (i, el) {
+      return selector(cheerio.load(el).root()).length > 0
+    })
+  }
+}
+
+export function reject (selector: string | Function) {
+  if (typeof selector === 'string') {
+    return (sel: Cheerio) => sel.not(selector)
+  } else {
+    return (sel: Cheerio) => sel.not(function (i, el) {
+      return selector(cheerio.load(el).root()).length > 0
+    })
+  }
+}
+
